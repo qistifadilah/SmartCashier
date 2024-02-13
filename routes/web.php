@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +13,18 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+// Login, Register, Logout and Dashboard Portal
+
+Route::controller(AuthController::class)->group(function() {
+    Route::get('/register', 'register')->name('auth.register');
+    Route::post('/store', 'store')->name('auth.store');
+    Route::get('/login', 'login')->name('auth.login');
+    Route::post('/authentication', 'authentication')->name('auth.authentication');
+    Route::post('/logout', 'logout')->name('auth.logout');
+    Route::get('/dashboard', 'dashboard')->name('auth.dashboard')->middleware('auth');
+});
+
 
 Route::get('/', function () {
     return view('welcome');
