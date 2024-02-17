@@ -39,8 +39,8 @@
             <hr>
             <div class="text text-center">
                 <a href="#">
-                    <h5>Hi, #</h5>
-                    <p class="text-sm text-muted">#</p>
+                    <h5>Hi, User</h5>
+                    <p class="text-sm text-muted">Smart Cashier</p>
                 </a>
             </div>
             <div class="sidebar-toggler  x">
@@ -48,7 +48,7 @@
             </div>
         </div>
         <div class="sidebar-menu">
-            <ul class="menu">
+            {{-- <ul class="menu">
                 <li class="sidebar-item @if (Request::segment(1) == 'dashboard') active @endif">
                     <a href="" class="sidebar-link">
                         <i class="bi bi-grid-fill"></i>
@@ -127,7 +127,7 @@
                         <button type="submit" class="btn btn-primary w-100">Logout</button>
                     </form>
                 </li>
-            </ul>
+            </ul> --}}
         </div>
     </div>
 </div>
