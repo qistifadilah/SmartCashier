@@ -29,7 +29,7 @@ class AuthServiceProvider extends ServiceProvider
             return $user->role_id == 3;
         });
 
-        /* define a petugas user role */
+        /* define a cashier user role */
         Gate::define('isCashier', function($user) {
             return $user->role_id == 2;
         });

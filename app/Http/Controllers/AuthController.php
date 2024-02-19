@@ -29,9 +29,6 @@ class AuthController extends Controller
             'name'  => 'required|string|max:250',
             'email' => 'required|email|max:250|unique:users,email',
             'password'  => 'required|min:8',
-            'umur' => 'required',
-            'bio' => 'required|min:10',
-            'alamat' => 'required|min:10',
         ]);
 
         $user->name         = $request->name;
@@ -80,10 +77,6 @@ class AuthController extends Controller
         if(Auth::check())
         {
             return view('auth.dashboard');
-        //     'users',
-        //     'terpinjams'
-        // ));
-            // return view('auth.dashboard');
         }
 
         return redirect()->route('auth.login');

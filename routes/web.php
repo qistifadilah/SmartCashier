@@ -25,7 +25,6 @@ Route::controller(AuthController::class)->group(function() {
     Route::get('/dashboard', 'dashboard')->name('auth.dashboard')->middleware('auth');
 });
 
-
 Route::get('/', function () {
     return view('welcome');
 });
