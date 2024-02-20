@@ -1,5 +1,6 @@
 @extends('layouts.main')
 @section('title', 'Supplier')
+
 @section('content')
     <div class="row mb-2">
         <div class="col-12 col-md-6 order-md-1 order-last">
@@ -9,9 +10,9 @@
             <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item">
-                        {{-- <a href="{{ route('auth.dashboard') }}">
+                        <a href="{{ route('auth.dashboard') }}">
                             Dashboard
-                        </a> --}}
+                        </a>
                     </li>
                     <li class="breadcrumb-item" aria-current="page">
                         Supplier
@@ -32,7 +33,7 @@
                     <div class="col-3 d-flex">
                         <a href="{{ route('supplier.create') }}" class="btn btn-primary">
                             <i class="bi bi-plus-lg"></i>
-                            Supplier
+                            New Supplier
                         </a>
                     </div>
                 </div>

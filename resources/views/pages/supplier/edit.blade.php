@@ -1,5 +1,6 @@
 @extends('layouts.main')
-@section('title', 'Edit | Supplier')
+@section('title', 'Edit Supplier')
+
 @section('content')
     <div class="row mb-2">
         <div class="col-12 col-md-6 order-md-1 order-last">

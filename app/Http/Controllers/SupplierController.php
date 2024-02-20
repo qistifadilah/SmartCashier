@@ -14,7 +14,7 @@ class SupplierController extends Controller
     {
         //
         $supplier = Supplier::all();
-        return view('supplier.index', compact('supplier'));
+        return view('pages.supplier.index', compact('supplier'));
     }
 
     /**
@@ -23,7 +23,7 @@ class SupplierController extends Controller
     public function create()
     {
         //
-        return view('supplier.create');
+        return view('pages.supplier.create');
     }
 
     /**
@@ -44,7 +44,7 @@ class SupplierController extends Controller
         $suppliers->alamat = $request->alamat;
         $suppliers->save();
 
-        return redirect()->route('supplier.index');
+        return redirect()->route('pages.supplier.index');
     }
 
     /**
@@ -61,7 +61,7 @@ class SupplierController extends Controller
     public function edit(Supplier $supplier)
     {
         //
-        return view('supplier.edit', compact('supplier'));
+        return view('pages.supplier.edit', compact('supplier'));
     }
 
     /**
@@ -77,7 +77,7 @@ class SupplierController extends Controller
         ]);
 
         $supplier->update($request->all());
-        return redirect()->route('supplier.index');
+        return redirect()->route('pages.supplier.index');
     }
 
     /**
@@ -87,6 +87,6 @@ class SupplierController extends Controller
     {
         //
         $supplier->delete();
-        return redirect()->route('supplier.index');
+        return redirect()->route('pages.supplier.index');
     }
 }

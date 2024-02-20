@@ -1,9 +1,10 @@
 @extends('layouts.main')
-@section('title', 'Create | Supplier')
+@section('title', 'Create Category')
+
 @section('content')
     <div class="row mb-2">
         <div class="col-12 col-md-6 order-md-1 order-last">
-            <h3>Add New Supplier</h3>
+            <h3>Add New Category</h3>
         </div>
         <div class="col-12 col-md-6 order-md-2 order-first">
             <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
@@ -15,7 +16,7 @@
                     </li>
                     <li class="breadcrumb-item" aria-current="page">
                         <a href="#">
-                            Supplier
+                            Category
                         </a>
                     </li>
                     <li class="breadcrumb-item">Create</li>
@@ -29,32 +30,21 @@
 
         {{-- card-header --}}
         {{-- <div class="card-header pt-3 pb-2 mb-2">
-            <h4 class="card-title">Form Supplier</h4>
+            <h4 class="card-title">Form category</h4>
         </div> --}}
 
         {{-- card-body --}}
-        <form action="{{ route('supplier.store') }}" method="POST">
+        <form action="{{ route('category.store') }}" method="POST">
             @csrf
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="nama_supplier">Nama Supplier</label>
-                            <input type="text" id="nama_supplier" class="form-control" name="nama_supplier"
-                                placeholder="Masukan nama supplier" value="">
+                            <label for="category">Category</label>
+                            <input type="text" id="category" class="form-control" name="category"
+                                placeholder="Enter category" value="">
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="no_telp">No. Telephone</label>
-                            <input type="number" id="no_telp" class="form-control" name="no_telp"
-                                placeholder="ex. 081234567896" value="">
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="alamat">Alamat</label>
-                    <textarea id="alamat" class="form-control" name="alamat" placeholder="Masukan alamat"></textarea>
                 </div>
             </div>
 
@@ -66,7 +56,8 @@
                         <button type="reset" class="btn btn-light-secondary me-1 mb-1">Reset</button>
                     </div>
                     <div class="col-6 d-flex justify-content-end">
-                        <input type="button" class="btn btn-primary" value="Back" onclick="window.location.href='{{ route('supplier.index') }}'">
+                        <input type="button" class="btn btn-primary" value="Back"
+                            onclick="window.location.href='{{ route('category.index') }}'">
                     </div>
                 </div>
             </div>
